@@ -6,8 +6,18 @@ public class Teller {
 
 	UserData fool = new UserData();
 	Scanner sc = new Scanner(System.in);
+	private int age = 0;
+	private int retirementAge = 0;
+	private String userColor = null;
+	private int siblingNumber = 0;
 
-	public Teller() {
+	public void teller() {
+		greeting();
+		askFirstName();
+		askLastName();
+		printNames();
+		//askAge();
+		generateRetAge();
 
 	}
 
@@ -44,14 +54,17 @@ public class Teller {
 	}
 	
 	
-	public void askAge() {
+	public int askAge() {
 		
 		
 		System.out.println("How old are you dear?");
 		
 		int input = sc.nextInt();
+		fool.setUserAge(input);
 		
-		fool.setAge(input);
+		this.age = input;
+		//System.out.println(this.age);
+		return this.age;
 	}
 
 	
@@ -60,18 +73,37 @@ public class Teller {
 	
 	public int generateRetAge() {
 		
-		int age = fool.getAge();
+		int age = askAge();
 		if((age % 2) == 0) 
 		{
-			//one age
+			this.retirementAge = 20;
+			
 		}
 		else {
 			
-			// another age
+			this.retirementAge = 15;
 		}
 		
-		return 0;///return age here
+		return this.retirementAge;///return age here
 		
 		
+	}
+	
+	
+	public int siblingNumber() {
+		System.out.println("How many siblings do you have my dear?");
+		int siblingCount = sc.nextInt();
+		this.siblingNumber = siblingCount;
+		fool.setSiblingNumber(siblingCount);
+		return this.siblingNumber;
+	}
+	
+	
+	public String rainbowColor() {
+		System.out.println("What is your favorite ROYGBIV color?");
+		String colorChoice = sc.next();
+		this.userColor = colorChoice;
+		fool.setUserColor(colorChoice);
+		return colorChoice;
 	}
 }
