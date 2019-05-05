@@ -7,10 +7,12 @@ public class Application {
 		
 		
 		
-		Game game = new Game();
+		//Game game = new Game();
+		Teller tellme = new Teller();
+		tellme.teller();
 		
 		
-		game.RunGame();
+		//game.RunGame();
 		
 	}
 
