@@ -1,14 +1,15 @@
 package fortuneteller.main.org;
 
 public class UserData {
-
+	// TODO Auto-generated constructor stub
+	
 	private String firstName;
 	private String lastName;
 	
 	
 	@Override
 	public String toString() {
-		return "UserData [firstName=" + firstName + ", lastName=" + lastName + "]";
+		return "UserData ["firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
 
 
@@ -31,9 +32,17 @@ public class UserData {
 		this.lastName = lastName;
 	}
 
+	public void setAge(String userAge) {
+		this.userAge = setAge;
+	}
 
+
+	public String getuserAge() {
+		return setAge;
+	}
+	
 	public UserData() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }
